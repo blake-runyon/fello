@@ -6,11 +6,13 @@ export default function Boards() {
     return (
         <>
         <h1>Board View</h1>
+        <div className="flex">
         {
             ids.map((i) => (
-                <Link key={i} href={`/boards/${i}`}>{ i.toString() }</Link>
+                <Link key={i} className="bg-slate-300 p-2 round mr-3" href={`/boards/${i}`}>{ i.toString() }</Link>
             ))
         }
+        </div>
         </>
     )
 }
