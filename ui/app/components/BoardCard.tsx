@@ -40,6 +40,10 @@ export default function BoardCard({ name }: Props) {
         setTasks([...tasks, item])
     }
 
+    function DeleteDisplay() {
+        return <div>Delete</div>;
+      }
+
     function deleteEvent() {
         if(selected === undefined) {
             alert("Please select an item to delete.")

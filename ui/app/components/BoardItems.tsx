@@ -10,7 +10,6 @@ type Props = {
 
 export default function BoardItems({ items, onSelect }: Props) {
     const [selected, setSelected] = useState<BoardItem>();
-    const [prev, setPrev] = useState<any>();
 
     useEffect(() => {
         onSelect(selected);
@@ -25,15 +24,8 @@ export default function BoardItems({ items, onSelect }: Props) {
     }
 
     const toggleActive = (event: any) => {
-        // 👇️ toggle class on click
         event.currentTarget.classList.toggle('bg-blue-300');
-    
-        // 👇️ add class on click
-        // event.currentTarget.classList.add('bg-salmon');
-    
-        // 👇️ remove class on click
-        // event.currentTarget.classList.remove('bg-salmon');
-      };
+    };
 
     return (
         <div className="w-auto h-52 overflow-visible overflow-x-auto overscroll-contain hover:cursor-pointer">

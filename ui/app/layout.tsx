@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify'
 import DevNav from './components/dev/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
@@ -17,6 +18,18 @@ export default function RootLayout({
       <body>
         <DevNav />
         {children}
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </body>
     </html>
   )
